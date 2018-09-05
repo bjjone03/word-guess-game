@@ -1,6 +1,6 @@
-var guess = 0;
 
-var guesses = ["red", "yellow","blue","green"];
+
+var guess = ["red","black","blue","green"];
 var guessRemaining = 10;
 var guessMade = 0;
 var guessStatus = 10;
@@ -11,12 +11,18 @@ var btn = document.querySelector("button");
 
 btn.addEventListener("click",onMouseClick);
 
-function onMouseClick(){
-    guessRemaining--;
-    guessMade++;
-    guessStatus--;
+function onMouseClick() {
+    output1.innerHTML = input1.value;
+    for (var i=0; i< guess.length; i++);
+}
+
+
+    
+
+
+
+
 
 
 
     
-}
