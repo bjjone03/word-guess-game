@@ -1,19 +1,35 @@
+var  randomWordArr = ["beef","chicken","pork","fish"];
+var randWord = randomWordArr[Math.floor(Math.random() * randomWordArr.length)];
 
+var s;
+var count = 0;
+var answerArray = [];
 
-var guess = ["red","black","blue","green"];
-var guessRemaining = 10;
-var guessMade = 0;
-var guessStatus = 10;
-var computer = (Math.random()*4);
-var input1 = document.querySelector("#ipbox");
-var output1 = document.querySelector("#output");
-var btn = document.querySelector("button");
+function startUp() 
+{
+    for (var i =0; i < randWord.length; i++)
+    {
+        answerArray[i] = "_";
+    }
 
-btn.addEventListener("click",onMouseClick);
+    s = answerArray.join(" ");
+    document.getElementById("answer").innerHTML = s;
+}
 
-function onMouseClick() {
-    output1.innerHTML = input1.value;
-    for (var i=0; i< guess.length; i++);
+function Letter() {
+    var letter = document.getElementById("letter").value;
+    if (letter.length > 0) {
+        for (var i = 0; i < randWord.length; i++)
+        if (randWord[i] === letter) {
+            answerArray[i] =letter;
+        }
+    }
+    count++;
+    document.getElementById("counter").innerHTML = "No of clicks: " + count;
+    document.getElementById("answer").innerHTML = answerArray.join(" ");
+}
+if(count>10) {
+    document.getElementById("stat").innerHTML = "you lose";
 }
 
 

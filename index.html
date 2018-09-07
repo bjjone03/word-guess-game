@@ -18,21 +18,21 @@
 </head>
 
 
-<body class="html">
+<body onload="startup()">
 <div id="allp">
-    <p id="p1">Guess the correct word. You have 10 chances to get the corrct answer.</p>
+    <p id="p1">Guess the correct letter. You have 10 chances to get the corrct answer.</p>
    
     <div id="score">
-    <p>Wins</p>
-    <p>Losses</p>
-    <p>Lives Left</p>
+    <input id="letter" type="text">
+    <input type="button" value="letter" onclick="Letter()"/>
+    <p id="answer"></p>
+    <p id="counter"></p>
+    <p id="stat"></p>
     </div>
 </div>
    
     <div id="all">
-    <input type= "text" id= "ipbox" placeholder ="Enter Your Guess"></input>
-    <button>Guess</button>
-    <p id="output"></p>
+    
     </div>
     <script type= "text/javascript" src="C:\Users\bjjon\homework\word-guess-game\assets\javascript\game.js"></script>
 
